@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/ripple"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:id="@+id/layout"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:transitionName="poster"
+        android:layout_width="125dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:clipToOutline="true"
+        android:background="@drawable/btnbg"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:textSize="12.5sp"
+        android:maxLines="1"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bold"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="10">
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="8dp"
+            android:progress="77"
+            android:id="@+id/rating"
+            android:progressDrawable="@drawable/progressbar" />
+        <TextView
+            android:id="@+id/ratingTv"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="7.7 ⭐"
+            android:layout_marginStart="5dp"
+            android:textSize="12.5sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bold"
+            android:textAlignment="viewEnd"/>
+    </LinearLayout>
+
+</LinearLayout>
