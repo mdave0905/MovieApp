@@ -11,8 +11,11 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        //Initialize the LottieAnimationView
         val lottieAnimation = findViewById<LottieAnimationView>(R.id.animation)
 
+        //Animation Listener to open Home Page when the animation has ended
         lottieAnimation.addAnimatorListener(object : Animator.AnimatorListener{
             override fun onAnimationStart(p0: Animator?) {
             }
